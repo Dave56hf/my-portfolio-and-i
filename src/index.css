@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+:root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.background {
+  position: relative;
+  /* needed for the pseudo-element */
+  min-height: 100vh;
+  /* or whatever height you need */
+  background-image: url(./assets/image-from-rawpixel-id-593171-jpeg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* This overlay creates the blur effect */
+.background::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  /* top-0 right-0 bottom-0 left-0 */
+  background-image: inherit;
+  /* copy the same image */
+  background-size: inherit;
+  background-position: inherit;
+  background-repeat: inherit;
+  filter: blur(0.8rem);
+  /* ← your blur amount */
+  opacity: 0.9;
+  /* adjust for desired darkness/brightness */
+  z-index: 0;
+}
+
+/* Make sure your content stays above the blurred layer */
+.background>* {
+  position: relative;
+  z-index: 1;
+}
