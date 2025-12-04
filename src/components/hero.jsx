@@ -9,6 +9,13 @@ import {
 import TextType from "./TextType";
 
 export default function hero() {
+  const hireMe = [
+    {
+      name: "Email",
+      href: "mailto:west15455@gmail.com",
+    },
+  ];
+
   const techLogos = [
     {
       node: <SiReact className="text-cyan-600 " />,
@@ -51,11 +58,15 @@ export default function hero() {
         />
       </span>
 
-      <div>
-        <button className="px-6 py-2 my-7 bg-cyan-700 rounded-full font-bold text-white">
-          {" "}
-          Hire me
-        </button>
+      <div className="my-10">
+        <a
+          href="mailto:west15455@gmail.com"
+          className="inline-block px-8 py-4 bg-cyan-700 hover:bg-cyan-600 transition-all duration-300 rounded-full font-bold text-white text-lg shadow-lg hover:shadow-cyan-500/25 transform hover:scale-105"
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          Hire Me
+        </a>
       </div>
 
       <div

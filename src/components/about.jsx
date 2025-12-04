@@ -19,7 +19,9 @@ export default function About() {
 
         {/* Right Side - Text Content */}
         <div className="space-y-8">
-          <h2 className="text-5xl md:text-6xl font-bold text-white">About.</h2>
+          <h2 className="text-5xl md:text-6xl font-bold text-white">
+            About<span className="text-cyan-400">.</span>
+          </h2>
 
           <div className="space-y-5 text-gray-300 text-lg md:text-xl leading-relaxed">
             <p>Web Developer transitioning to a career in technology.</p>

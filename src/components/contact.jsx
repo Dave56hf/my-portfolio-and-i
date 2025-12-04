@@ -23,7 +23,7 @@ export default function Contact() {
     {
       name: "Email",
       icon: IoMdMail,
-      href: "mailto:dave@example.com",
+      href: "mailto:west15455@gmail.com",
     },
   ];
 

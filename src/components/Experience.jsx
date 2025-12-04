@@ -25,7 +25,7 @@ export default function Experience() {
         <p>
           Founded & built{" "}
           <span className="text-cyan-300 font-medium">Orixa</span> — a
-          full-stack AI crypto app (React + Node + Web3) used by thousands.
+          full-stack AI crypto app (React + Node + Tailwind) used by thousands.
         </p>
 
         <p>
