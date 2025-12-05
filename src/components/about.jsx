@@ -1,55 +1,69 @@
 import React from "react";
+import { motion } from "framer-motion"; // Correct import
 import { Code2, Palette, Zap } from "lucide-react";
 import PotImg from "../assets/huu2so.jpg";
 
 export default function About() {
   return (
-    <section className="py-20 px-6 md:py-32 ">
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-25 justify-between items-center">
-        {/* Left Side - Gradient Block */}
-        <div className="relative flex justify-center md:justify-end">
-          <div className="relative z-10 w-70 h-80 md:w-66 md:h-full lg:w-80 rounded-3xl overflow-hidden border-4 border-cyan-500/50 ">
+    <motion.section
+      className="py-20 px-6 md:py-32"
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 lg:gap-20 items-center">
+        {/* Left – Your Photo */}
+        <div className="relative flex justify-center md:justify-end mb-12 md:mb-0">
+          <div className="relative z-10 w-80 h-96 md:w-96 md:h-[500px] rounded-3xl overflow-hidden border-4 border-cyan-500/40 shadow-2xl">
             <img
               src={PotImg}
-              alt="Dave - Frontend Developer & Designer"
+              alt="Dave – Frontend Developer & Designer"
               className="w-full h-full object-cover"
             />
           </div>
+
+          {/* Glow behind the photo */}
+          <div className="absolute inset-0 -z-10 blur-3xl">
+            <div className="h-full w-full rounded-full bg-linear-to-br from-cyan-400/40 to-blue-600/40 scale-110 animate-pulse" />
+          </div>
         </div>
 
-        {/* Right Side - Text Content */}
+        {/* Right – Text */}
         <div className="space-y-8">
           <h2 className="text-5xl md:text-6xl font-bold text-white">
             About<span className="text-cyan-400">.</span>
           </h2>
 
           <div className="space-y-5 text-gray-300 text-lg md:text-xl leading-relaxed">
-            <p>Web Developer transitioning to a career in technology.</p>
+            <p>Web Developer transitioning to a full-time career in tech.</p>
+
             <p>
-              Currently, my focus is on learning and mastering modern web
-              development with{" "}
+              Mastering{" "}
               <span className="text-cyan-400 font-medium">
-                React, TypeScript, Tailwind CSS
+                React, TypeScript, Next.js, Tailwind
               </span>{" "}
-              and <span className="text-cyan-400 font-medium">Next.js</span>.
+              and shipping production-grade apps.
             </p>
+
             <p>
-              As a designer at heart, I also create stunning visuals and motion
-              graphics using Figma, After Effects and Blender.
+              Designer at heart — crafting visuals, branding & motion graphics
+              with Figma, After Effects and Blender.
             </p>
-            <p className="text-white font-medium">
-              I build things that look good and work even better.
+
+            <p className="text-white font-semibold text-xl">
+              I don’t just code and design.
+              <br />I create experiences people love.
             </p>
           </div>
 
-          {/* Optional mini icons */}
-          <div className="flex gap-6 pt-6">
-            <Code2 className="w-8 h-8 text-cyan-400" />
-            <Palette className="w-8 h-8 text-cyan-400" />
-            <Zap className="w-8 h-8 text-cyan-400" />
+          <div className="flex gap-6 pt-4">
+            <Code2 className="w-9 h-9 text-cyan-400" />
+            <Palette className="w-9 h-9 text-cyan-400" />
+            <Zap className="w-9 h-9 text-cyan-400" />
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }

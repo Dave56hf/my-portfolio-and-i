@@ -1,5 +1,7 @@
 import React from "react";
 import LogoLoop from "./LogoLoop";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import {
   SiReact,
   SiNextdotjs,
@@ -9,13 +11,6 @@ import {
 import TextType from "./TextType";
 
 export default function hero() {
-  const hireMe = [
-    {
-      name: "Email",
-      href: "mailto:west15455@gmail.com",
-    },
-  ];
-
   const techLogos = [
     {
       node: <SiReact className="text-cyan-600 " />,
@@ -39,7 +34,12 @@ export default function hero() {
     },
   ];
   return (
-    <div className="my-1 mx-5 pt-8 md:pt-16  lg:pt-15 ">
+    <motion.div
+      className="my-1 mx-5 pt-8 md:pt-16  lg:pt-15 "
+      initial={{ x: 50 }}
+      animate={{ x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl mb-5 xl:text-8xl font-bold text-white leading-tight">
         Hi, I'm{" "}
         <span className="inline-flex items-baseline sm:items-baseline ">
@@ -48,7 +48,7 @@ export default function hero() {
         </span>
         <br />
       </h1>
-      <span className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl mb-5 xl:text-8xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white to-cyan-500">
+      <span className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl mb-5 xl:text-8xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-cyan-500">
         <TextType
           text={["Frontend Developer", "Graphics Designer", "Web3 Enthusiast"]}
           typingSpeed={75}
@@ -85,6 +85,6 @@ export default function hero() {
           ariaLabel="Technology partners"
         />
       </div>
-    </div>
+    </motion.div>
   );
 }

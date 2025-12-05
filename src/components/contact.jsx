@@ -1,5 +1,11 @@
 import React from "react";
-import { FaSquareWhatsapp, FaSquareXTwitter, FaSquareGithub } from "react-icons/fa6";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
+import {
+  FaSquareWhatsapp,
+  FaSquareXTwitter,
+  FaSquareGithub,
+} from "react-icons/fa6";
 import { IoMdMail } from "react-icons/io";
 import { FiExternalLink } from "react-icons/fi"; // optional arrow
 
@@ -7,7 +13,7 @@ export default function Contact() {
   const links = [
     {
       name: "Whatsapp",
-      icon: FaSquareWhatsapp, 
+      icon: FaSquareWhatsapp,
       href: "https://wa.me/qr/YVJCNRNTMY24H1",
     },
     {
@@ -28,7 +34,11 @@ export default function Contact() {
   ];
 
   return (
-    <section className="py-20 px-6 md:py-32">
+    <motion.section className="py-20 px-6 md:py-32"
+    initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}>
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-5xl md:text-6xl font-bold text-white mb-4">
           Contact<span className="text-cyan-400">.</span>
@@ -62,9 +72,7 @@ export default function Contact() {
             );
           })}
         </div>
-
-       
       </div>
-    </section>
+    </motion.section>
   );
 }

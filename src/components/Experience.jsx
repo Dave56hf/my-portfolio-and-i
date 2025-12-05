@@ -1,9 +1,17 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
+import { motion } from "framer-motion";
 import { Briefcase } from "lucide-react";
 
 export default function Experience() {
   return (
-    <section className="py-2 px-6 sm:mx-3 ">
+    <motion.section
+      className="py-2 px-6 sm:mx-3 "
+      initial={{ opacity: 0, x: 100 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.7, ease: "easeOut" }}
+    >
       <div className="flex items-center gap-4 mb-10">
         <Briefcase className="w-8 h-8 text-cyan-400" />
         <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
@@ -40,6 +48,6 @@ export default function Experience() {
           level up big things with you.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }

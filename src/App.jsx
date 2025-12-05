@@ -5,6 +5,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/contact";
 import About from "./components/about";
 import Footer from "./components/footer";
+import Skills from "./components/Skills";
 
 export default function App() {
   return (
@@ -13,6 +14,7 @@ export default function App() {
       <Hero />
       <Experience />
       <About />
+      <Skills />
       <Contact />
       <Footer />
     </div>
