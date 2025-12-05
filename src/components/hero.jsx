@@ -35,12 +35,12 @@ export default function hero() {
   ];
   return (
     <motion.div
-      className="my-1 mx-5 pt-8 md:pt-16  lg:pt-15 "
+      className="px-6 pt-12 pb-20 md:pt-20 lg:pt-24 xl:pt-32 text-center md:text-left "
       initial={{ x: 50 }}
       animate={{ x: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl mb-5 xl:text-8xl font-bold text-white leading-tight">
+      <h1 className="text-5xl xs:text-6xl sm:text-7xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-none">
         Hi, I'm{" "}
         <span className="inline-flex items-baseline sm:items-baseline ">
           Dave
@@ -48,7 +48,7 @@ export default function hero() {
         </span>
         <br />
       </h1>
-      <span className="text-4xl sm:text-5xl md:text-7xl lg:text-7xl mb-5 xl:text-8xl font-bold bg-clip-text text-transparent bg-linear-to-r from-white to-cyan-500">
+      <span className="text-5xl xs:text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black bg-gradient-to-r from-white via-cyan-200 to-cyan-500 bg-clip-text text-transparent">
         <TextType
           text={["Frontend Developer", "Graphics Designer", "Web3 Enthusiast"]}
           typingSpeed={75}
