@@ -4,39 +4,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  color: #e2e8f0;
+  background: radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.07), transparent 35%),
+    radial-gradient(circle at 80% 0%, rgba(129, 140, 248, 0.05), transparent 30%),
+    #0b1522;
+  font-family: "Inter", "Space Grotesk", system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.01em;
 }
 
-.background {
-  position: relative;
-  /* needed for the pseudo-element */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
   min-height: 100vh;
-  /* or whatever height you need */
-  background-image: url(./assets/image-from-rawpixel-id-593171-jpeg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: transparent;
 }
 
-/* This overlay creates the blur effect */
-.background::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  /* top-0 right-0 bottom-0 left-0 */
-  background-image: inherit;
-  /* copy the same image */
-  background-size: inherit;
-  background-position: inherit;
-  background-repeat: inherit;
-  filter: blur(0.8rem);
-  /* ← your blur amount */
-  opacity: 0.9;
-  /* adjust for desired darkness/brightness */
-  z-index: 0;
+h1,
+h2,
+h3 {
+  text-wrap: balance;
 }
 
-/* Make sure your content stays above the blurred layer */
-.background>* {
-  position: relative;
-  z-index: 1;
+p {
+  text-wrap: pretty;
 }
