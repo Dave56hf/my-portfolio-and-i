@@ -7,14 +7,7 @@
 }
 
 .background {
-  position: relative;
-  /* needed for the pseudo-element */
-  min-height: 100vh;
-  /* or whatever height you need */
-  background-image: url(./assets/image-from-rawpixel-id-593171-jpeg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background-color: black;
 }
 
 /* This overlay creates the blur effect */

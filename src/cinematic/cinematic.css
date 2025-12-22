@@ -1,0 +1,431 @@
+/* Cinematic-only (system UI) */
+
+.cinematic-background {
+  --cine-ink: #050607;
+  --cine-text: rgba(255, 255, 255, 0.88);
+  --cine-dim: rgba(255, 255, 255, 0.56);
+  --cine-border: rgba(255, 255, 255, 0.12);
+  --cine-panel: rgba(5, 6, 7, 0.72);
+  --cine-accent: #00ff88;
+  --cine-accent-soft: rgba(0, 255, 136, 0.10);
+
+  min-height: 100vh;
+  background: var(--cine-ink);
+  color: var(--cine-text);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  letter-spacing: -0.01em;
+  scroll-behavior: smooth;
+}
+
+.cinematic-root * {
+  border-radius: 0 !important;
+}
+
+.cinematic-root::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.6;
+  background:
+    repeating-linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.03) 0px,
+      rgba(255, 255, 255, 0.03) 1px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0) 7px
+    ),
+    repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.02) 0px,
+      rgba(255, 255, 255, 0.02) 1px,
+      rgba(0, 0, 0, 0) 2px,
+      rgba(0, 0, 0, 0) 28px
+    );
+  mix-blend-mode: overlay;
+}
+
+.cinematic-root::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(1200px 900px at 55% 60%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.72) 70%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.10), rgba(0, 0, 0, 0.55));
+}
+
+.cinematic-root > * {
+  position: relative;
+  z-index: 1;
+}
+
+.cine-bgFixed {
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  opacity: 0.45;
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px 12px;
+  border-bottom: 1px solid var(--cine-border);
+  background: rgba(5, 6, 7, 0.78);
+  backdrop-filter: blur(10px);
+}
+
+.sigil {
+  color: rgba(0, 255, 136, 0.85);
+  margin-right: 10px;
+}
+
+.dim {
+  color: var(--cine-dim);
+}
+
+.topbarLeft {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.84);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.topbarRight {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.topbarLink {
+  display: inline-flex;
+  padding: 6px 10px;
+  border: 1px solid var(--cine-border);
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+}
+
+.topbarLink:hover {
+  border-color: rgba(0, 255, 136, 0.35);
+  background: var(--cine-accent-soft);
+}
+
+.dock {
+  position: fixed;
+  left: 12px;
+  top: 110px;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dockBtn {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--cine-border);
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  background: rgba(5, 6, 7, 0.55);
+}
+
+.dockBtn:hover {
+  color: rgba(0, 255, 136, 0.9);
+  border-color: rgba(0, 255, 136, 0.35);
+  background: rgba(0, 255, 136, 0.06);
+}
+
+.cineMain {
+  max-width: 1040px;
+  margin: 0 auto;
+  padding: 26px 18px 120px;
+}
+
+.cineSection + .cineSection {
+  margin-top: 46px;
+}
+
+.cineHero {
+  padding-top: 14px;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: 1.25fr 0.75fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.heroKicker {
+  color: rgba(0, 255, 136, 0.82);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-size: clamp(30px, 3vw, 44px);
+  line-height: 1.05;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+}
+
+.heroTitleDim {
+  color: rgba(255, 255, 255, 0.74);
+  font-weight: 600;
+}
+
+.heroTyped {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.80);
+}
+
+.heroPrompt {
+  color: rgba(0, 255, 136, 0.85);
+}
+
+.heroRight {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.frame {
+  border: 1px solid var(--cine-border);
+  background: rgba(255, 255, 255, 0.03);
+  padding: 10px;
+}
+
+.profileImg {
+  display: block;
+  width: auto;
+  height: auto;
+  filter: grayscale(10%) contrast(1.05);
+}
+
+.cineHeading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--cine-border);
+  margin-bottom: 14px;
+}
+
+.cineHeadingLeft {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.cineHeadingRight {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.58);
+}
+
+.hash {
+  color: rgba(0, 255, 136, 0.85);
+  margin-right: 2px;
+}
+
+.projGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.projCard {
+  display: block;
+  padding: 14px 14px 12px;
+  border: 1px solid var(--cine-border);
+  background: rgba(5, 6, 7, 0.55);
+  color: rgba(255, 255, 255, 0.86);
+  text-decoration: none;
+}
+
+.projCard:hover {
+  border-color: rgba(0, 255, 136, 0.28);
+  background: rgba(0, 255, 136, 0.04);
+}
+
+.projTop {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.projTitle {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.projMeta {
+  font-size: 11px;
+  color: rgba(0, 255, 136, 0.75);
+  letter-spacing: 0.12em;
+}
+
+.projPreview {
+  margin-top: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  background: rgba(0, 0, 0, 0.22);
+}
+
+.projPreview pre {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: pre-wrap;
+}
+
+.projDesc {
+  margin-top: 10px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.projStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip {
+  font-size: 12px;
+  padding: 3px 8px;
+  border: 1px solid rgba(0, 255, 136, 0.18);
+  color: rgba(0, 255, 136, 0.78);
+  background: rgba(0, 255, 136, 0.05);
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.skillTile {
+  border: 1px solid var(--cine-border);
+  background: rgba(5, 6, 7, 0.55);
+  padding: 14px 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.skillIcon {
+  width: 18px;
+  height: 18px;
+  color: rgba(0, 255, 136, 0.85);
+  flex: none;
+}
+
+.skillName {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+/* Terminal block */
+.term {
+  border: 1px solid var(--cine-border);
+  background: rgba(5, 6, 7, 0.55);
+  padding: 14px 12px 12px;
+}
+
+.termPrompt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255, 255, 255, 0.80);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.termUser {
+  color: rgba(0, 255, 136, 0.9);
+}
+
+.termPath {
+  color: rgba(255, 255, 255, 0.62);
+}
+
+.termCmd {
+  color: rgba(255, 255, 255, 0.90);
+}
+
+.termOut {
+  margin-top: 10px;
+}
+
+.termLine {
+  font-size: 13px;
+  line-height: 1.55;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.termLine--dim {
+  color: rgba(255, 255, 255, 0.56);
+}
+
+.termRule {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: 10px 0;
+}
+
+.term a {
+  color: rgba(0, 255, 136, 0.86);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.22);
+}
+
+.term a:hover {
+  border-bottom-color: rgba(0, 255, 136, 0.55);
+}
+
+@media (max-width: 920px) {
+  .dock {
+    display: none;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .heroRight {
+    justify-content: flex-start;
+  }
+
+  .projGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topbarRight {
+    display: none;
+  }
+}

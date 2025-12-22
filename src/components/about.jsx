@@ -1,4 +1,5 @@
 import React from "react";
+// eslint-disable-next-line no-unused-vars
 import { motion } from "framer-motion"; // Correct import
 import { Code2, Palette, Zap } from "lucide-react";
 import PotImg from "../assets/huu2so.jpg";
@@ -21,11 +22,6 @@ export default function About() {
               alt="Dave – Frontend Developer & Designer"
               className="w-full h-full object-cover"
             />
-          </div>
-
-          {/* Glow behind the photo */}
-          <div className="absolute inset-0 -z-10 blur-3xl">
-            <div className="h-full w-full rounded-full bg-linear-to-br from-cyan-400/40 to-blue-600/40 scale-110 animate-pulse" />
           </div>
         </div>
 
