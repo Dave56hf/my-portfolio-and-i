@@ -8,8 +8,8 @@ import SectionHeading from "./ui/SectionHeading";
 import ProjectGrid from "./ui/ProjectGrid";
 import SkillGrid from "./ui/SkillGrid";
 import Terminal, { TerminalLine, TerminalRule } from "./ui/Terminal";
+import HackerTerminal from "./ui/HackerTerminal";
 import TextType from "../components/TextType";
-import profileImg from "../assets/profiles.png";
 import { FaXTwitter } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa6";
 import { BiLogoGmail } from "react-icons/bi";
@@ -123,10 +123,8 @@ export default function CinematicApp() {
               </Terminal>
             </div>
 
-            <div className="heroRight">
-              <div className="frame">
-                <img className="profileImg" src={profileImg} alt="Dave profile" />
-              </div>
+            <div className="heroSide">
+              <HackerTerminal reducedMotion={prefersReducedMotion()} />
             </div>
           </div>
         </section>
