@@ -15,7 +15,7 @@ function ProjectCard({ title, meta, desc, stack, href }) {
       </div>
       <div className="projPreview" aria-hidden>
         <pre>
-{`$ ${title.toLowerCase().replace(/\s+/g, "-")} --status
+          {`$ ${title.toLowerCase().replace(/\s+/g, "-")} --status
 > ${meta}
 > ${stack.join(" + ")}`}
         </pre>
@@ -35,11 +35,11 @@ function ProjectCard({ title, meta, desc, stack, href }) {
 export default function ProjectGrid() {
   const projects = [
     {
-      title: "Portfolio",
+      title: "Notan Ai",
       meta: "LIVE",
-      desc: "This site. Built as a system UI, not a landing page.",
-      stack: ["React", "GSAP", "Three"],
-      href: "/",
+      desc: "This is just the landing page of a video generator website",
+      stack: ["React", "Tailwind", "Three"],
+      href: "https://notan-ai-project.vercel.app",
     },
     {
       title: "Orixa",
@@ -49,11 +49,11 @@ export default function ProjectGrid() {
       href: "#projects",
     },
     {
-      title: "Client Work",
+      title: "Reo Wallet",
       meta: "DELIVERED",
       desc: "Landing pages, dashboards, brands. Fast iterations, clean handoff.",
-      stack: ["React", "Figma"],
-      href: "#projects",
+      stack: ["React", "css", "Javascript"],
+      href: "https://reo-psi.vercel.app",
     },
     {
       title: "CryptoTrack",
