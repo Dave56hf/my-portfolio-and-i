@@ -2,8 +2,8 @@ import React, { useMemo, useRef } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import * as THREE from "three";
 
-const ACCENT = "#00ff88";
-const INK = "#050607";
+const ACCENT = "#ff6b00";
+const INK = "#0a0a0a";
 
 const fract = (x) => x - Math.floor(x);
 const prand = (seed) => fract(Math.sin(seed * 12.9898) * 43758.5453123);
@@ -112,7 +112,7 @@ function SystemRig({ progressRef, enabled }) {
 
   return (
     <group ref={groupRef}>
-      <gridHelper args={[28, 28, ACCENT, "#0b1f15"]} position={[0, -1.6, -14]} />
+      <gridHelper args={[28, 28, ACCENT, "#241106"]} position={[0, -1.6, -14]} />
       <TracePoints progressRef={progressRef} />
     </group>
   );
@@ -130,7 +130,7 @@ export default function SystemScene({ progressRef, className = "" }) {
         <color attach="background" args={[INK]} />
         <fog attach="fog" args={[INK, 6, 22]} />
         <ambientLight intensity={0.15} />
-        <directionalLight position={[2, 4, 2]} intensity={0.35} color="#d7ffe8" />
+        <directionalLight position={[2, 4, 2]} intensity={0.35} color="#fff0e4" />
         <directionalLight position={[-6, -2, -2]} intensity={0.25} color={ACCENT} />
         <SystemRig progressRef={progressRef} enabled={enabled} />
       </Canvas>
