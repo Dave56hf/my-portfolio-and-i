@@ -377,7 +377,7 @@ export default function CinematicApp() {
               Premium Web3 interfaces, engineered end-to-end
             </motion.span>
             <motion.h1 className="heroTitle" variants={reveal}>
-              Dave builds digital products for the on-chain era.
+              We builds digital products for the on-chain era.
             </motion.h1>
             <motion.div className="heroTyped" variants={reveal}>
               <TextType
