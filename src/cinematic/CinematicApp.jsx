@@ -213,7 +213,7 @@ function TradingMockup() {
   return (
     <div className="tradingMock visualPanel" aria-label="Trading interface mockup">
       <div className="mockTop">
-        <span>ORX / USDC</span>
+        <span> / USDC</span>
         <strong>+18.42%</strong>
       </div>
       <div className="chartBars">
@@ -323,7 +323,10 @@ export default function CinematicApp() {
 
   return (
     <div ref={rootRef} className="cinematic-root cinematic-background">
-      <SystemScene progressRef={reduceMotion ? undefined : pageProgressRef} className="cine-bgFixed" />
+      <SystemScene
+        progressRef={reduceMotion ? undefined : pageProgressRef}
+        className="cine-bgFixed"
+      />
 
       <header className="topbar">
         <a className="brandMark" href="#top" aria-label="Dave home">
@@ -347,7 +350,11 @@ export default function CinematicApp() {
               className="dockBtn"
               href={link.href}
               target={link.href.startsWith("mailto:") ? undefined : "_blank"}
-              rel={link.href.startsWith("mailto:") ? undefined : "noreferrer noopener"}
+              rel={
+                link.href.startsWith("mailto:")
+                  ? undefined
+                  : "noreferrer noopener"
+              }
               aria-label={link.label}
               key={link.label}
             >
@@ -390,7 +397,11 @@ export default function CinematicApp() {
               flows, AI tools, and NFT launches.
             </motion.p>
             <motion.div className="heroActions" variants={reveal}>
-              <MagneticButton href="mailto:west15455@gmail.com">Start a project</MagneticButton>
+              <MagneticButton
+                href="https://x.com/Dave_QuestXS"
+              >
+                Start a project
+              </MagneticButton>
               <MagneticButton href="#work" variant="ghost">
                 View case studies
               </MagneticButton>
@@ -401,10 +412,17 @@ export default function CinematicApp() {
             className="heroVisual"
             initial={{ opacity: 0, scale: 0.94, y: 40 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
+            transition={{
+              duration: 0.9,
+              ease: [0.22, 1, 0.36, 1],
+              delay: 0.12,
+            }}
           >
             <div className="portraitFrame">
-              <img src={PortraitImg} alt="Dave illustrated developer portrait" />
+              <img
+                src={PortraitImg}
+                alt="Dave illustrated developer portrait"
+              />
             </div>
             <div className="floatingStat statOne">
               <span>Revenue-minded UI</span>
@@ -429,7 +447,11 @@ export default function CinematicApp() {
             animate="show"
           >
             {stats.map((item) => (
-              <motion.div className="metricCard" variants={reveal} key={item.label}>
+              <motion.div
+                className="metricCard"
+                variants={reveal}
+                key={item.label}
+              >
                 <strong>{item.value}</strong>
                 <span>{item.label}</span>
               </motion.div>
@@ -460,8 +482,8 @@ export default function CinematicApp() {
             <motion.div className="storyPanel" variants={reveal}>
               <p>
                 I bridge product design taste with front-end execution: clean
-                code, fast interfaces, refined motion, and experiences that
-                make crypto products feel trustworthy.
+                code, fast interfaces, refined motion, and experiences that make
+                crypto products feel trustworthy.
               </p>
               <p>
                 Designer at heart, I craft visuals, branding, and motion with
@@ -592,7 +614,11 @@ export default function CinematicApp() {
             viewport={{ once: true, margin: "-120px" }}
           >
             {achievements.map((item) => (
-              <motion.div className="achievementCard" variants={reveal} key={item.label}>
+              <motion.div
+                className="achievementCard"
+                variants={reveal}
+                key={item.label}
+              >
                 <strong>{item.value}</strong>
                 <span>{item.label}</span>
               </motion.div>
@@ -613,7 +639,11 @@ export default function CinematicApp() {
             viewport={{ once: true, margin: "-120px" }}
           >
             {testimonials.map((item) => (
-              <motion.article className="testimonialCard" variants={reveal} key={item.name}>
+              <motion.article
+                className="testimonialCard"
+                variants={reveal}
+                key={item.name}
+              >
                 <p>"{item.quote}"</p>
                 <div>
                   <strong>{item.name}</strong>
@@ -644,28 +674,48 @@ export default function CinematicApp() {
                   <Mail size={18} aria-hidden />
                   west15455@gmail.com
                 </a>
-                <a href="https://github.com/Dave56hf" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="https://github.com/Dave56hf"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <Github size={18} aria-hidden />
                   github.com/Dave56hf
                 </a>
-                <a href="https://wa.me/qr/YVJCNRNTMY24H1" target="_blank" rel="noreferrer noopener">
+                <a
+                  href="https://wa.me/qr/YVJCNRNTMY24H1"
+                  target="_blank"
+                  rel="noreferrer noopener"
+                >
                   <Globe2 size={18} aria-hidden />
                   WhatsApp
                 </a>
               </div>
             </div>
-            <form className="contactForm" action="mailto:west15455@gmail.com" method="post">
+            <form
+              className="contactForm"
+              action="mailto:west15455@gmail.com"
+              method="post"
+            >
               <label>
                 Name
                 <input name="name" type="text" placeholder="Your name" />
               </label>
               <label>
                 Email
-                <input name="email" type="email" placeholder="you@company.com" />
+                <input
+                  name="email"
+                  type="email"
+                  placeholder="you@company.com"
+                />
               </label>
               <label>
                 Project
-                <textarea name="message" placeholder="Tell me what you are building" rows="5" />
+                <textarea
+                  name="message"
+                  placeholder="Tell me what you are building"
+                  rows="5"
+                />
               </label>
               <button type="submit">
                 Send inquiry
