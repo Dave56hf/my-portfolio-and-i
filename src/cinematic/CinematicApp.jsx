@@ -73,11 +73,11 @@ const skills = [
 
 const projects = [
   {
-    title: "Orixa",
-    eyebrow: "Full-stack crypto app",
-    desc: "A crypto AI product shipped end-to-end with product strategy, React UI, Node services, and a trading-focused experience.",
-    stack: ["React", "Node", "Tailwind", "Crypto UX"],
-    href: "#",
+    title: "Quest",
+    eyebrow: "Crypto market intelligence platform",
+    desc: "A crypto operating system built to replace fragmented multi-tool research workflows unified research, an Opportunity Score engine, and an Early Warning System for retail traders.",
+    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Supabase"],
+    href: "https://quest-xs.vercel.app",
     visual: "trading",
   },
   {
@@ -85,7 +85,7 @@ const projects = [
     eyebrow: "Video generation landing page",
     desc: "A cinematic AI product launch page with motion, 3D presence, and sharp conversion sections.",
     stack: ["React", "Tailwind", "Three.js"],
-    href: "https://notan-ai-project.vercel.app",
+    href: "https://github.com/Dave56hf/Notan-AI-PROJECT",
     visual: "dashboard",
   },
   {
@@ -93,16 +93,8 @@ const projects = [
     eyebrow: "Wallet brand and interface",
     desc: "A Web3 wallet presentation with clean onboarding, product storytelling, and polished interface states.",
     stack: ["React", "CSS", "JavaScript"],
-    href: "#",
+    href: "https://github.com/Dave56hf/Reo",
     visual: "wallet",
-  },
-  {
-    title: "CryptoTrack",
-    eyebrow: "Tracking and alerts",
-    desc: "A market intelligence concept for alerts, portfolio movement, and real-time data scanning.",
-    stack: ["React", "API", "Charts"],
-    href: "#work",
-    visual: "case",
   },
 ];
 
