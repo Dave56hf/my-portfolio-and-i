@@ -1,6 +1,6 @@
 import React from "react";
-import CinematicApp from "./cinematic/CinematicApp.jsx";
+import Site from "./site/Site.jsx";
 
 export default function App() {
-  return <CinematicApp />;
+  return <Site />;
 }
