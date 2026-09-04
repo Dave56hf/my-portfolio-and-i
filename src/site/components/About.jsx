@@ -24,8 +24,8 @@ export default function About() {
           </h2>
           <p className="muted" style={{ fontSize: 15.5, lineHeight: 1.7, maxWidth: 420 }}>
             I'm a finance student and self-taught developer based in Port
-            Harcourt, Nigeria. I got into Web3 about five years ago and it's
-            shaped how I think about products since — I care about
+            Harcourt, Nigeria. I got into Web3 about five years ago, and it's
+            shaped how I think about products since. I care about
             interfaces that are fast, clear, and don't waste anyone's time.
             When I'm not building client work, I'm usually shipping features
             on my own projects.

@@ -20,7 +20,7 @@ export const projects = [
       body: [
         "Web3 Job Hunter aggregates roles from RemoteOK, Web3.career, CryptoJobsList, and Remotive into a single ranked feed, so I don't have to check four sites separately every day.",
         "Each listing is tagged by source, role type, and relevance, with save/apply tracking so nothing gets lost in the shuffle.",
-        "The built-in AI assistant, powered by the Anthropic API, can answer questions about the current feed on demand — for example, surfacing design-focused roles from a specific source, or pulling out listings that match a specific stack.",
+        "The built-in AI assistant, powered by the Anthropic API, can answer questions about the current feed on demand. For example, it can surface design-focused roles from a specific source, or pull out listings that match a specific stack.",
       ],
       stack: ["Anthropic API", "Web Search Integration", "RemoteOK", "Web3.career", "CryptoJobsList", "Remotive"],
     },
@@ -39,7 +39,7 @@ export const projects = [
         "A UI exploration for a crypto research dashboard, which later became the visual foundation for QuestXS.",
       body: [
         "The design leans into a dark green, black, and gold palette, using grain overlays for texture instead of the default glassmorphism look.",
-        "Card grouping and hierarchy were worked out here first — market data, sentiment, and screener tools laid out for fast scanning rather than a cluttered dashboard.",
+        "Card grouping and hierarchy were worked out here first: market data, sentiment, and screener tools laid out for fast scanning rather than a cluttered dashboard.",
         "This exploration became the direct visual reference for QuestXS, the crypto research platform I later built and shipped.",
       ],
       stack: ["Figma", "UI/UX Design", "Design Systems"],
@@ -58,7 +58,7 @@ export const projects = [
       summary:
         "A booking-focused concept for a travel agency landing page, leaning on big destination photography and a simple path to booking.",
       body: [
-        "The layout puts large, warm destination imagery front and center, with trust signals — rating, traveler count — placed close to the booking action instead of buried further down the page.",
+        "The layout puts large, warm destination imagery front and center, with trust signals (rating, traveler count) placed close to the booking action instead of buried further down the page.",
         "Typography and spacing were kept simple and confident, letting the photography carry most of the visual weight rather than competing with it.",
       ],
       stack: ["Figma", "UI/UX Design", "Web Design"],
@@ -89,7 +89,7 @@ export const experience = [
   {
     period: "Now",
     title: "Freelance Frontend Developer & UI/UX Designer",
-    copy: "Building web products for clients — including dashboard UIs and portfolio sites — while running my own client acquisition and marketing.",
+    copy: "Building web products for clients, including dashboard UIs and portfolio sites, while running my own client acquisition and marketing.",
   },
   {
     period: "Ongoing",
@@ -99,7 +99,7 @@ export const experience = [
   {
     period: "5+ years",
     title: "Web3 & Crypto Community",
-    copy: "Long-standing involvement in the Web3 space — building products, exploring NFT projects, and staying close to how the ecosystem moves.",
+    copy: "Long-standing involvement in the Web3 space: building products, exploring NFT projects, and staying close to how the ecosystem moves.",
   },
 ];
 

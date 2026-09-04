@@ -27,7 +27,7 @@ export default function Contact() {
           </h2>
           <p className="muted" style={{ fontSize: 16, lineHeight: 1.6, marginBottom: 32 }}>
             Whether it's a product to design, a frontend to build, or just an
-            idea you want to sanity-check — my inbox is open.
+            idea you want to sanity-check, my inbox is open.
           </p>
 
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
