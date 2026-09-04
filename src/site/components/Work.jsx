@@ -157,32 +157,18 @@ export default function Work() {
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           {projects.map((project, index) => {
-            const isExternal = Boolean(project.href);
-            const Tag = motion.a;
-            const interactionProps = isExternal
-              ? { href: project.href, target: "_blank", rel: "noreferrer noopener" }
-              : {
-                  href: undefined,
-                  role: "button",
-                  tabIndex: 0,
-                  onClick: () => setActiveProject(project),
-                  onKeyDown: (e) => {
-                    if (e.key === "Enter" || e.key === " ") {
-                      e.preventDefault();
-                      setActiveProject(project);
-                    }
-                  },
-                };
+            const hasExternal = Boolean(project.href);
+            const hasDetail = Boolean(project.detail);
 
             return (
-              <Tag
+              <motion.div
                 key={project.title}
                 variants={reveal}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, margin: "-80px" }}
                 transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1], delay: index * 0.05 }}
-                className="work-row focus-ring"
+                className="work-row"
                 style={{
                   display: "grid",
                   gridTemplateColumns: "220px 1fr",
@@ -190,11 +176,8 @@ export default function Work() {
                   alignItems: "center",
                   padding: "32px 0",
                   borderTop: index === 0 ? "none" : "1px solid var(--line)",
-                  textDecoration: "none",
                   color: "var(--ink)",
-                  cursor: "pointer",
                 }}
-                {...interactionProps}
               >
                 <Thumb id={project.thumb} title={project.title} />
 
@@ -218,14 +201,13 @@ export default function Work() {
                       · {project.year}
                     </span>
                   </div>
-                  <h3 className="serif" style={{ fontSize: 23, marginBottom: 10, display: "flex", alignItems: "center", gap: 8 }}>
+                  <h3 className="serif" style={{ fontSize: 23, marginBottom: 10 }}>
                     {project.title}
-                    <ArrowUpRight size={18} className="row-arrow" aria-hidden />
                   </h3>
                   <p className="muted" style={{ fontSize: 15.5, lineHeight: 1.6, maxWidth: 560, marginBottom: 14 }}>
                     {project.desc}
                   </p>
-                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: hasExternal || hasDetail ? 16 : 0 }}>
                     {project.stack.map((item) => (
                       <span
                         key={item}
@@ -241,21 +223,39 @@ export default function Work() {
                       </span>
                     ))}
                   </div>
-                  {!isExternal && (
-                    <span
-                      style={{
-                        display: "inline-block",
-                        marginTop: 14,
-                        fontSize: 13.5,
-                        fontWeight: 600,
-                        color: "var(--accent)",
-                      }}
-                    >
-                      {project.linkLabel || "Read more"}
-                    </span>
-                  )}
+
+                  <div style={{ display: "flex", gap: 20, flexWrap: "wrap", alignItems: "center" }}>
+                    {hasExternal && (
+                      <a
+                        href={project.href}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="work-cta focus-ring"
+                        style={{ color: "var(--ink)" }}
+                      >
+                        {project.linkLabel || "Visit"}
+                        <ArrowUpRight size={16} className="row-arrow" aria-hidden />
+                      </a>
+                    )}
+                    {hasDetail && (
+                      <button
+                        type="button"
+                        className="work-cta focus-ring"
+                        style={{
+                          background: "none",
+                          border: "none",
+                          padding: 0,
+                          cursor: "pointer",
+                          color: "var(--accent)",
+                        }}
+                        onClick={() => setActiveProject(project)}
+                      >
+                        Read more
+                      </button>
+                    )}
+                  </div>
                 </div>
-              </Tag>
+              </motion.div>
             );
           })}
         </div>
@@ -264,8 +264,9 @@ export default function Work() {
       <ProjectDetailModal project={activeProject} onClose={() => setActiveProject(null)} />
 
       <style>{`
-        .work-row .row-arrow { transition: transform 0.2s ease; opacity: 0.5; }
-        .work-row:hover .row-arrow { transform: translate(3px, -3px); opacity: 1; color: var(--accent); }
+        .work-cta { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5; font-weight: 600; text-decoration: none; }
+        .work-cta .row-arrow { transition: transform 0.2s ease; opacity: 0.6; }
+        .work-cta:hover .row-arrow { transform: translate(3px, -3px); opacity: 1; color: var(--accent); }
         @media (max-width: 640px) {
           .work-row { grid-template-columns: 1fr !important; }
         }

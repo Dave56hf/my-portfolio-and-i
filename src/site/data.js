@@ -34,6 +34,16 @@ export const projects = [
     href: "https://dribbble.com/shots/27680785-Crypto-Market-Intelligence-Platform",
     linkLabel: "View on Dribbble",
     thumb: "crypto-platform",
+    detail: {
+      summary:
+        "A UI exploration for a crypto research dashboard, which later became the visual foundation for QuestXS.",
+      body: [
+        "The design leans into a dark green, black, and gold palette, using grain overlays for texture instead of the default glassmorphism look.",
+        "Card grouping and hierarchy were worked out here first — market data, sentiment, and screener tools laid out for fast scanning rather than a cluttered dashboard.",
+        "This exploration became the direct visual reference for QuestXS, the crypto research platform I later built and shipped.",
+      ],
+      stack: ["Figma", "UI/UX Design", "Design Systems"],
+    },
   },
   {
     title: "Travel Agency Design",
@@ -44,6 +54,15 @@ export const projects = [
     href: "https://dribbble.com/shots/27680951-Travel-Agency-Design",
     linkLabel: "View on Dribbble",
     thumb: "travel-agency",
+    detail: {
+      summary:
+        "A booking-focused concept for a travel agency landing page, leaning on big destination photography and a simple path to booking.",
+      body: [
+        "The layout puts large, warm destination imagery front and center, with trust signals — rating, traveler count — placed close to the booking action instead of buried further down the page.",
+        "Typography and spacing were kept simple and confident, letting the photography carry most of the visual weight rather than competing with it.",
+      ],
+      stack: ["Figma", "UI/UX Design", "Web Design"],
+    },
   },
 ];
 
