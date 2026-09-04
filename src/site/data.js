@@ -7,14 +7,23 @@ export const nav = [
 
 export const projects = [
   {
-    title: "QuestXS",
-    tag: "Live product",
-    year: "2025—",
-    desc: "A unified crypto research platform built to replace fragmented multi-tool workflows — market data, an Opportunity Score engine, and an Early Warning System in one interface.",
-    stack: ["Next.js 14", "TypeScript", "Tailwind CSS", "Supabase"],
-    href: "https://quest-xs.vercel.app",
-    linkLabel: "Visit site",
-    thumb: "questxs",
+    title: "Web3 Job Hunter",
+    tag: "Personal tool",
+    year: "2025",
+    desc: "A job board that pulls Web3 and frontend roles from multiple sources into one ranked feed, with an AI assistant for digging into specific listings.",
+    stack: ["Anthropic API", "Web Search", "Job Aggregation"],
+    thumb: "job-hunter",
+    linkLabel: "Read more",
+    detail: {
+      summary:
+        "Built to solve my own problem: Web3 and frontend job listings are scattered across too many sources to check daily.",
+      body: [
+        "Web3 Job Hunter aggregates roles from RemoteOK, Web3.career, CryptoJobsList, and Remotive into a single ranked feed, so I don't have to check four sites separately every day.",
+        "Each listing is tagged by source, role type, and relevance, with save/apply tracking so nothing gets lost in the shuffle.",
+        "The built-in AI assistant, powered by the Anthropic API, can answer questions about the current feed on demand — for example, surfacing design-focused roles from a specific source, or pulling out listings that match a specific stack.",
+      ],
+      stack: ["Anthropic API", "Web Search Integration", "RemoteOK", "Web3.career", "CryptoJobsList", "Remotive"],
+    },
   },
   {
     title: "Crypto Market Intelligence Platform",
