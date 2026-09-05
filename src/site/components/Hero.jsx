@@ -38,7 +38,7 @@ export default function Hero() {
             className="muted"
             style={{ fontSize: 17, maxWidth: 480, lineHeight: 1.6, marginBottom: 32 }}
           >
-            David West is a Nigeria-based frontend developer and product
+            I'm a Nigeria-based frontend developer and product
             designer with roughly five years in the Web3 community. I design
             in Figma and build in React, and I care about interfaces that
             feel considered, not templated.
